@@ -14,13 +14,5 @@
   // Add nodejs_compat compatibility flag to support common database drivers
   "compatibility_flags": [
     "nodejs_compat"
-  ],
-
-  // Add this to your wrangler.jsonc
-  "hyperdrive": [
-    {
-      "binding": "HYPERDRIVE",
-      "id": "3b742284e36e4ea4a7332cd75f68f22a"
-    }
   ]
 }
