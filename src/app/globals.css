@@ -24,3 +24,36 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.press {
+  transition: transform 160ms var(--ease-out);
+}
+
+.press:active {
+  transform: scale(0.97);
+}
+
+.toast {
+  transition:
+    opacity 400ms ease,
+    transform 400ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .press {
+    transition: none;
+  }
+
+  .press:active {
+    transform: none;
+  }
+
+  /* Keep the fade so toasts still read as arriving and leaving; drop the movement. */
+  .toast {
+    transition: opacity 200ms ease;
+  }
+}
